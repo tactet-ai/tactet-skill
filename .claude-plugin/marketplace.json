@@ -1,15 +1,15 @@
 {
-  "name": "search2o",
-  "description": "The Search2o plugin for Claude Code: find and run your Search2o agents.",
+  "name": "tactet",
+  "description": "The Tactet plugin for Claude Code: find and run your Tactet agents.",
   "owner": {
-    "name": "Search2o",
-    "url": "https://search2o.com"
+    "name": "Tactet",
+    "url": "https://tactet.com"
   },
   "plugins": [
     {
-      "name": "search2o",
+      "name": "tactet",
       "source": "./",
-      "description": "Find and run your Search2o agents from Claude Code."
+      "description": "Find and run your Tactet agents from Claude Code."
     }
   ]
 }

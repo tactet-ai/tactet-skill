@@ -1,5 +1,5 @@
 ---
-name: search2o
+name: tactet
 description: >
   Use when the person asks for something the company has an internal agent for —
   orders, tickets, HR policy, approvals, reports from internal systems — or names an
@@ -7,15 +7,15 @@ description: >
   the person could do without company systems.
 ---
 
-# Company agents through Search2o
+# Company agents through Tactet
 
-Search2o holds the company's agents. Search finds the right one for a request and runs
-it. Use `scripts/s2o.py`. Read `reference.md` for result codes, output types and the
+Tactet holds the company's agents. Search finds the right one for a request and runs
+it. Use `scripts/tactet.py`. Read `reference.md` for result codes, output types and the
 exact request and response shapes.
 
 ## Steps
 
-1. Send the request to `search` as the person wrote it. Search2o refuses a query shorter
+1. Send the request to `search` as the person wrote it. Tactet refuses a query shorter
    than eight characters, so treat anything that short, such as "hi" or "thanks", as
    conversation rather than a request.
 2. At most two matches come back, best first, each with an `agentName` and an
@@ -33,7 +33,7 @@ exact request and response shapes.
    with the same conversation id and the answers in `inputs` under the same keys, one
    dictionary per block (see the reference).
    Never collect a password-type input in chat; give the person the link to the
-   conversation in the Search2o GUI instead. While a question is unanswered, only that
+   conversation in the Tactet GUI instead. While a question is unanswered, only that
    agent can run in the conversation, and any other gets `unknownConversation`.
 6. Show `text` parts as they are. Describe `image` parts. For `html`, summarize and link
    to the conversation in the GUI.
@@ -47,11 +47,11 @@ exact request and response shapes.
 ## Running it
 
 ```bash
-python3 scripts/s2o.py search '{"query": "where is order 4182"}'
-python3 scripts/s2o.py execAgent '{"agentName": "order_status", "inputs": {"query": "where is order 4182"}}'
-python3 scripts/s2o.py execAgent '{"agentName": "order_status", "convid": "<id>", "inputs": {"ask_": {"pick": "alpha"}}}'
+python3 scripts/tactet.py search '{"query": "where is order 4182"}'
+python3 scripts/tactet.py execAgent '{"agentName": "order_status", "inputs": {"query": "where is order 4182"}}'
+python3 scripts/tactet.py execAgent '{"agentName": "order_status", "convid": "<id>", "inputs": {"ask_": {"pick": "alpha"}}}'
 ```
 
-The script reads the server address from `SEARCH2O_SERVER` or `~/.search2o/server`, and the
-token from `SEARCH2O_TOKEN` or `~/.search2o/token`.
+The script reads the server address from `TACTET_SERVER` or `~/.tactet/server`, and the
+token from `TACTET_TOKEN` or `~/.tactet/token`.
 It prints one JSON object, and prints a message and exits non-zero when the call fails.

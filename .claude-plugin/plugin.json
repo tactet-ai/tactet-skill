@@ -1,15 +1,15 @@
 {
-  "name": "search2o",
+  "name": "tactet",
   "version": "1.0.0",
-  "description": "Find and run your Search2o agents: search for the agent that fits a request, run it, answer its questions and show the result.",
+  "description": "Find and run your Tactet agents: search for the agent that fits a request, run it, answer its questions and show the result.",
   "author": {
-    "name": "Search2o",
-    "url": "https://search2o.com"
+    "name": "Tactet",
+    "url": "https://tactet.com"
   },
-  "homepage": "https://search2o.com/docs/skill-integration/index.html",
-  "repository": "https://github.com/Search2o/search2o-skill",
+  "homepage": "https://tactet.com/docs/skill-integration/index.html",
+  "repository": "https://github.com/tactet-ai/tactet-skill",
   "keywords": [
-    "search2o",
+    "tactet",
     "agents",
     "internal-tools"
   ]

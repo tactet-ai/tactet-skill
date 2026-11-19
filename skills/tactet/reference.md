@@ -1,4 +1,4 @@
-# Search2o reference
+# Tactet reference
 
 Both calls are POST, under `/api/exec`, with `Authorization: Bearer <token>`.
 
